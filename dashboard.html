@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" class="logo" href="images/logo 2 copy.png" type="image/x-icon">
+    <title>Dashboard | Amestudio</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <header class="dashboard-nav">
+
+        <div class="logo">
+            <img src="images/logoames2.png" alt="" class="logo-img">
+            <h2>Asociación Cultural Amestudio</h2>
+        </div>
+
+        <div class="user-info">
+
+            <span class="user-name">Juan Pérez</span>
+
+            <button class="logout-btn">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="dashboard-container">
+
+        <h1>Hola de nuevo, Juan</h1>
+
+        <p class="subtitle">
+            Este es el resumen de tu desempeño académico.
+        </p>
+
+
+        <div class="card chart-card">
+
+            <h3>Tu progreso en simulacros</h3>
+
+            <p class="chart-subtitle">
+                Visualización de notas obtenidas por semana
+            </p>
+
+            <canvas id="progressChart"></canvas>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <p class="stat-title">Mejor nota histórica</p>
+
+                <h2 class="stat-number">18.5</h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p class="stat-title">Última nota obtenida</p>
+
+                <h2 class="stat-number">16.0</h2>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
