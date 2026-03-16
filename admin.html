@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Administrador | Amestudio</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="admin-nav">
+
+        <div class="logo">
+            <img src="images/logoames2.png" alt="" class="logo-img">
+            <h2>Asociación Cultural Amestudio</h2>
+        </div>
+
+        <div class="admin-actions">
+
+            <button class="logout-btn">Cerrar sesión</button>
+
+        </div>
+
+    </header>
+
+
+    <main class="admin-container">
+
+        <h1>Panel de Administración</h1>
+        <p class="subtitle">Gestión de alumnos y registro de simulacros</p>
+
+
+        <section class="card">
+
+            <h2>Crear alumno</h2>
+
+            <form id="studentForm">
+
+                <input type="text" id="nombre" placeholder="Nombre" required>
+
+                <input type="text" id="apellido" placeholder="Apellido" required>
+
+                <input type="text" id="usuario" placeholder="Usuario" required>
+
+                <input type="password" id="password" placeholder="Contraseña" required>
+
+                <button type="submit">Crear alumno</button>
+
+            </form>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Registrar nota de simulacro</h2>
+
+            <form id="scoreForm">
+
+                <select id="studentSelect" required>
+                    <option value="">Seleccionar alumno</option>
+                </select>
+
+                <input type="number" id="semana" placeholder="Semana (1-20)" required>
+
+                <input type="number" step="0.01" id="nota" placeholder="Nota del simulacro" required>
+
+                <button type="submit">Registrar nota</button>
+
+            </form>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>Lista de alumnos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Alumno</th>
+                        <th>Usuario</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentsTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
