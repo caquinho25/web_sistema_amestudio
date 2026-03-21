@@ -27,7 +27,7 @@
 
         <div class="user-info">
 
-            <span class="user-name">Juan Pérez</span>
+            <span class="user-name" id="nombre-navbar"></span>
 
             <button class="logout-btn">
                 Cerrar sesión
@@ -41,7 +41,7 @@
 
     <main class="dashboard-container">
 
-        <h1>Hola de nuevo, Juan</h1>
+        <h1 id="welcomeText">Hola de nuevo</h1>
 
         <p class="subtitle">
             Este es el resumen de tu desempeño académico.
@@ -67,7 +67,7 @@
 
                 <p class="stat-title">Mejor nota histórica</p>
 
-                <h2 class="stat-number">18.5</h2>
+                <h2 class="stat-number" id="mejorNota">18.5</h2>
 
             </div>
 
@@ -76,13 +76,16 @@
 
                 <p class="stat-title">Última nota obtenida</p>
 
-                <h2 class="stat-number">16.0</h2>
+                <h2 class="stat-number" id="ultimaNota">16.0</h2>
 
             </div>
 
         </div>
 
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="js/supabase.js"></script>
 
     <script src="js/dashboard.js"></script>
 
