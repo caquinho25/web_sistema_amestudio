@@ -295,6 +295,10 @@ body {
 
 @media (max-width: 900px) {
 
+    .logo-text {
+    display: none;
+    }
+
     .hero {
         flex-direction: column;
         gap: 40px;
