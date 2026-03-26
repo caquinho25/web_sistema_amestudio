@@ -118,3 +118,11 @@ canvas {
     font-size: 32px;
     color: #111827;
 }
+
+
+@media (max-width: 900px) {
+
+    .logo-text {
+    display: none;
+    }
+}

@@ -124,3 +124,10 @@ td {
     border-radius: 6px;
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+
+    .logo-text {
+    display: none;
+    }
+}
