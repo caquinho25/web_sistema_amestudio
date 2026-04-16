@@ -1,155 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" class="logo" href="images/logo 2 copy.png" type="image/x-icon">
-    <title>Amestudio | Sistema de Simulacros</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amestudio | Sistema de Simulacros</title>
+  <link rel="shortcut icon" href="images/logo 2 copy.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-    <header class="navbar">
 
-        <div class="nav-container">
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="nav-container">
 
-            <div class="logo">
-                <img src="images/logoames2.png" alt="" class="logo-img">
-                <h2 class="logo-text">Asociación Cultural Amestudio</h2>
-            </div>
+      <!-- logo -->
+      <div class="logo" aria-label="Asociación Cultural Amestudio">
+        <img src="images/logoames2.png" alt="Logo Amestudio" class="logo-img" />
+        <h2 class="logo-text">Asociación Cultural Amestudio</h2>
+      </div>
 
-            <nav class="nav-menu" id="navMenu">
-                <a href="#inicio">Inicio</a>
-                <a href="#inicio">Sobre nosotros</a>
-                <a href="#cards">Simulacros</a>
-                <a href="#" class="btn-nav">Iniciar Sesión</a>
-            </nav>
+      <!-- navbar -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menú principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#inicio">Sobre nosotros</a>
+        <a href="#cards">Simulacros</a>
+        <a href="#inicio" class="btn-nav">Iniciar Sesión</a>
+      </nav>
 
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <!-- hamburger (mobile) -->
+      <button id="hamburger" class="hamburger" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
 
-        </div>
+    </div>
+  </header>
 
-    </header>
-
-
-
+  <!-- HERO / LOGIN -->
+  <main>
 
     <section id="inicio" class="hero">
 
-        <div class="hero-left">
+      <div class="hero-left">
+        <div class="hero-badge">Admisión UNALM 2026</div>
 
-            <div class="hero-badge">
-                Admisión UNALM 2026
-            </div>
+        <h1 class="hero-title">
+          Sistema de <br />
+          Seguimiento de <br />
+          <span>Simulacros</span>
+        </h1>
 
-            <h1 class="hero-title">
-                Sistema de <br>
-                Seguimiento de <br>
-                <span>Simulacros</span>
-            </h1>
+        <p class="hero-description">
+          Monitorea tu progreso semanal, identifica tus debilidades y prepárate
+          con éxito para alcanzar tu vacante en la UNALM.
+        </p>
 
-            <p class="hero-description">
-                Monitorea tu progreso semanal, identifica tus debilidades y
-                prepárate con éxito para alcanzar tu vacante en la UNALM.
-            </p>
+        <div class="hero-image" aria-hidden="true"></div>
+      </div>
 
+      <div class="hero-right">
+        <div class="login-card" role="region" aria-labelledby="loginTitle">
+          <h2 id="loginTitle">Ingresar al sistema</h2>
+          <p class="login-subtitle">Accede a tus resultados y estadísticas</p>
 
+          <form id="loginForm" autocomplete="on" novalidate>
+            <label for="loginUser">Usuario o Correo</label>
+            <input type="text" id="loginUser" name="loginUser" placeholder="ej. juan.perez" required />
 
+            <label for="loginPass">Contraseña</label>
+            <input type="password" id="loginPass" name="loginPass" placeholder="••••••••" required />
+
+            <button type="submit" class="btn-login">Ingresar</button>
+          </form>
         </div>
-
-
-        <div class="hero-right">
-
-            <div class="login-card">
-
-                <h2>Ingresar al sistema</h2>
-                <p class="login-subtitle">Accede a tus resultados y estadísticas</p>
-
-                <form id="loginForm">
-
-                    <label>Usuario o Correo</label>
-                    <input type="text" id="loginUser" placeholder="ej. juan.perez" required>
-
-                    <label>Contraseña</label>
-                    <input type="password" id="loginPass" placeholder="••••••••" required>
-
-                    <button type="submit">Ingresar</button>
-
-                </form>
-
-            </div>
-
-        </div>
+      </div>
 
     </section>
 
-
+    <!-- FEATURES / CARDS -->
     <section id="cards" class="features">
+      <div class="feature-card">
+        <h3>Seguimiento de progreso</h3>
+        <p>Observa cómo evolucionan tus resultados semana a semana.</p>
+      </div>
 
-        <div class="feature-card">
+      <div class="feature-card">
+        <h3>Simulacros semanales</h3>
+        <p>Registra y analiza tus resultados en cada evaluación.</p>
+      </div>
 
-            <h3>Seguimiento de progreso</h3>
-
-            <p>
-                Observa cómo evolucionan tus resultados semana a semana.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <h3>Simulacros semanales</h3>
-
-            <p>
-                Registra y analiza tus resultados en cada evaluación.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <h3>Mejora constante</h3>
-
-            <p>
-                Identifica tu crecimiento académico fácilmente.
-            </p>
-
-        </div>
-
+      <div class="feature-card">
+        <h3>Mejora constante</h3>
+        <p>Identifica tu crecimiento académico fácilmente.</p>
+      </div>
     </section>
 
-    <footer class="footer">
+  </main>
 
-        <div class="footer-content">
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <p class="footer-title">Asociación Cultural Amestudio © 2026</p>
+      <p class="footer-copy">Asociación Cultural Amestudio - Preparación Integral para la UNALM</p>
+    </div>
+  </footer>
 
-            <p class="footer-title">
-                Asociación Cultural Amestudio © 2026
-            </p>
-            <p class="footer-copy">
-                Asociación Cultural Amestudio - Preparación Integral para la UNALM
-            </p>
-        </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
+  <script src="js/supabase.js" defer></script>
 
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script src="js/supabase.js"></script>
-
-    <script src="js/login.js"></script>
+  <script src="js/login.js" defer></script>
 
 </body>
-
 </html>

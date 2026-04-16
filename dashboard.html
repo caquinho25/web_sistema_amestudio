@@ -2,91 +2,107 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" class="logo" href="images/logo 2 copy.png" type="image/x-icon">
-    <title>Dashboard | Amestudio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" class="logo" href="images/logo 2 copy.png" type="image/x-icon" />
+  <title>Dashboard | Amestudio</title>
 
-    <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-    <header class="dashboard-nav">
+  <header class="dashboard-nav">
+    <div class="logo">
+      <img src="images/logoames2.png" alt="logo" class="logo-img" />
+      <h2 class="logo-text">Asociación Cultural Amestudio</h2>
+    </div>
 
-        <div class="logo">
-            <img src="images/logoames2.png" alt="" class="logo-img">
-            <h2 class="logo-text">Asociación Cultural Amestudio</h2>
-        </div>
+    <div class="user-info">
+      <span class="user-name" id="nombre-navbar">Alumno</span>
+      <button class="logout-btn">Cerrar sesión</button>
+    </div>
+  </header>
 
-        <div class="user-info">
+  <main class="dashboard-container">
 
-            <span class="user-name" id="nombre-navbar"></span>
+    <div class="page-head">
+      <h1 id="welcomeText">Hola de nuevo</h1>
+      <p class="subtitle">Este es el resumen de tu desempeño académico.</p>
+    </div>
 
-            <button class="logout-btn">
-                Cerrar sesión
-            </button>
+    <!-- GRID PRINCIPAL: -->
+    <div class="dashboard-grid">
 
-        </div>
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="left-col">
+        <section class="card chart-card">
+          <h3>Tu progreso en simulacros <span class="badge">Semanal</span></h3>
+          <p class="chart-subtitle">Visualización de notas obtenidas por semana</p>
 
-    </header>
-
-
-
-    <main class="dashboard-container">
-
-        <h1 id="welcomeText">Hola de nuevo</h1>
-
-        <p class="subtitle">
-            Este es el resumen de tu desempeño académico.
-        </p>
-
-
-        <div class="card chart-card">
-
-            <h3>Tu progreso en simulacros</h3>
-
-            <p class="chart-subtitle">
-                Visualización de notas obtenidas por semana
-            </p>
-
+          <div class="chart-wrapper">
             <canvas id="progressChart"></canvas>
-
-        </div>
-
+          </div>
+        </section>
 
         <div class="stats">
+          <div class="stat-card">
+            <p class="stat-title">Mejor nota histórica</p>
+            <h2 class="stat-number" id="mejorNota">-</h2>
+          </div>
 
-            <div class="stat-card">
+          <div class="stat-card">
+            <p class="stat-title">Última nota obtenida</p>
+            <h2 class="stat-number" id="ultimaNota">-</h2>
+          </div>
+        </div>
+      </div>
 
-                <p class="stat-title">Mejor nota histórica</p>
+      <!-- COLUMNA DERECHA -->
+      <aside class="right-col">
+        <!-- Resultado box: -->
+        <div id="resultadoBox" class="resultado-box card">
+          <h3>Último resultado</h3>
 
-                <h2 class="stat-number" id="mejorNota">18.5</h2>
+          <p class="small">Alumno: <strong id="resAlumno">-</strong></p>
+          <p class="small">Semana: <strong id="resSemana">-</strong></p>
 
-            </div>
+          <p class="nota-final">
+            Nota Final: <span id="resNota">-</span>
+          </p>
 
-
-            <div class="stat-card">
-
-                <p class="stat-title">Última nota obtenida</p>
-
-                <h2 class="stat-number" id="ultimaNota">16.0</h2>
-            </div>
-
+          <div class="areas-resultado" aria-live="polite">
+            <div class="area-item">RV: <span id="resRV">-</span></div>
+            <div class="area-item">RM: <span id="resRM">-</span></div>
+            <div class="area-item">MAT: <span id="resMAT">-</span></div>
+            <div class="area-item">FIS: <span id="resFIS">-</span></div>
+            <div class="area-item">QUI: <span id="resQUI">-</span></div>
+            <div class="area-item">BIO: <span id="resBIO">-</span></div>
+            <div class="area-item">CS:  <span id="resCS">-</span></div>
+          </div>
         </div>
 
-    </main>
+        <!-- Consejos -->
+        <div class="card small-card">
+          <h4>Consejos rápidos</h4>
+          <ul class="tips">
+            <li>Revisa áreas con nota baja y practica diariamente.</li>
+            <li>Compite contigo mismo: intenta no bajar de tu mejor nota.</li>
+          </ul>
+        </div>
+      </aside>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script src="js/supabase.js"></script>
+    </div>
 
-    <script src="js/dashboard.js"></script>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="js/supabase.js"></script>
+  
+  <script src="js/dashboard.js"></script>
 
 </body>
 
