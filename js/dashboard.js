@@ -83,8 +83,8 @@ function crearOModificarGrafico(labels, dataValues){
         backgroundColor: 'rgba(108,166,81,0.18)',
         tension: 0.35,
         fill: true,
-        borderWidth: 3,
-        pointRadius: 4,
+        borderWidth: 1.5,
+        pointRadius: 2,
         pointBackgroundColor: '#6CA651'
       }]
     },
@@ -100,12 +100,11 @@ function crearOModificarGrafico(labels, dataValues){
           ticks: {
             stepSize: 2,
             callback: v => Number(v).toFixed(0),
-            font: { size: 12 },
+            font: { size: 8 },
             color: '#334155',
             padding: 6
           },
           grid: { color: 'rgba(15,23,42,0.06)' },
-          title: { display: true, text: 'Nota (0 - 20)', color: '#334155', font: { size: 12 } }
         },
         x: {
           ticks: {
@@ -113,7 +112,7 @@ function crearOModificarGrafico(labels, dataValues){
             maxTicksLimit: 12,
             maxRotation: 45,
             minRotation: 0,
-            font: { size: 12 },
+            font: { size: 8 },
             color: '#334155',
             padding: 6
           },

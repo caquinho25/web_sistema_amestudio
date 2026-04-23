@@ -103,7 +103,7 @@ body{
 .tips{margin-top:8px;list-style:disc;margin-left:18px;color:var(--muted);font-size:13px}
 
 /* RESPONSIVE: tablet+ desktop */
-@media (min-width:900px){
+@media (min-width:1000px){
   .dashboard-grid{
     grid-template-columns: 1fr 360px;
     align-items:start;
@@ -119,6 +119,6 @@ body{
 @media (max-width:640px){
   .logo-text{display:none}
   .logo-img{height:48px}
-  .chart-wrapper{height:320px; max-width: 100%;}
+  .chart-wrapper{height:200px; max-width: 100%;}
   .areas-resultado{grid-template-columns:repeat(2,1fr)}
 }
