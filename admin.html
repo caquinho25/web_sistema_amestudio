@@ -148,6 +148,46 @@
 
     </section>
 
+    <!-- Gráfico de notas -->
+    <section class="card">
+      <h2>Gráfico de progreso del alumno</h2>
+
+      <div class="chart-filter">
+        <select id="studentChartSelect">
+          <option value="">Seleccionar alumno para ver gráfico</option>
+        </select>
+      </div>
+    
+      <div class="admin-chart-layout">
+        <div class="admin-chart-box">
+          <canvas id="adminProgressChart"></canvas>
+        </div>
+      
+        <div id="adminStudentSummary" class="admin-student-summary">
+          <h3>Último simulacro</h3>
+        
+          <p>Alumno: <span id="chartAlumnoNombre">-</span></p>
+          <p>Semana: <span id="chartSemana">-</span></p>
+          <p class="nota-final">Nota Final: <span id="chartNotaFinal">-</span></p>
+        
+          <div class="areas-resultado">
+            <p>RV: <span id="chartRV">-</span></p>
+            <p>RM: <span id="chartRM">-</span></p>
+            <p>MAT: <span id="chartMAT">-</span></p>
+            <p>FIS: <span id="chartFIS">-</span></p>
+            <p>QUI: <span id="chartQUI">-</span></p>
+            <p>BIO: <span id="chartBIO">-</span></p>
+            <p>CS: <span id="chartCS">-</span></p>
+          </div>
+        </div>
+      </div>
+    
+      <p id="adminChartMessage" class="chart-message">
+        Selecciona un alumno para visualizar su progreso.
+      </p>
+    </section>
+     
+
     <!-- Tabla de alumnos -->
     <section class="card">
       <h2>Lista de alumnos</h2>
@@ -166,6 +206,9 @@
     </section>
 
   </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="js/supabase.js"></script>
